@@ -6,10 +6,10 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("WpfMessageBoxLibrary")]
-[assembly: AssemblyDescription("A WPF MessageBox")]
+[assembly: AssemblyDescription("A WPF message box, with optional features like custom buttons, textbox and checkbox.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("WpfMessageBoxLibrary")]
+[assembly: AssemblyProduct("WpfMessageBox")]
 [assembly: AssemblyCopyright("https://github.com/Otiel/WpfMessageBox")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
