@@ -52,6 +52,8 @@ bool checkBoxChecked = msgProperties.IsCheckBoxChecked;
 string textBoxContent = msgProperties.TextBoxText;
 ```
 
+More examples can be found in the Demo project of this repository.
+
 ## Release notes
 
 See the [changelog](CHANGELOG.md).
