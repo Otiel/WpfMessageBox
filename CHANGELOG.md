@@ -1,3 +1,9 @@
+# 1.1.0
+
+## Improvements
+
+* Target .NET Framework 4 instead of 4.7.2.
+
 # 1.0.1
 
 ## Improvements
