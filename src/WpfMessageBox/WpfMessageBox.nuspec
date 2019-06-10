@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/Otiel/WpfMessageBox</projectUrl>
+    <iconUrl>https://github.com/Otiel/WpfMessageBox/raw/master/docs/images/Icon.64x64.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>wpf messagebox</tags>
+  </metadata>
+</package>
