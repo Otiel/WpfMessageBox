@@ -1,0 +1,276 @@
+﻿<Window
+    x:Class="Demo.WindowMain"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="WpfMessageBox demo"
+    SizeToContent="WidthAndHeight"
+    mc:Ignorable="d">
+    <Grid x:Name="gridMain" Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Label
+            x:Name="labelStandardMessageBox"
+            Grid.Row="0"
+            Grid.Column="1"
+            HorizontalAlignment="Center"
+            Content="Standard MessageBox"
+            FontSize="20" />
+        <Label
+            x:Name="labelWpfMessageBox"
+            Grid.Row="0"
+            Grid.Column="2"
+            HorizontalAlignment="Center"
+            Content="WpfMessageBox"
+            FontSize="20" />
+        <Label
+            Grid.Row="1"
+            Grid.Column="0"
+            VerticalAlignment="Center"
+            Content="Without title" />
+        <Label
+            Grid.Row="2"
+            Grid.Column="0"
+            VerticalAlignment="Center"
+            Content="With text" />
+        <Label
+            Grid.Row="3"
+            Grid.Column="0"
+            VerticalAlignment="Center"
+            Content="With icon" />
+        <Label
+            Grid.Row="4"
+            Grid.Column="0"
+            VerticalAlignment="Center"
+            Content="With header" />
+        <Label
+            Grid.Row="5"
+            Grid.Column="0"
+            VerticalAlignment="Center"
+            Content="Custom buttons" />
+        <Label
+            Grid.Row="6"
+            Grid.Column="0"
+            VerticalAlignment="Center"
+            Content="With textbox" />
+        <Label
+            Grid.Row="7"
+            Grid.Column="0"
+            VerticalAlignment="Center"
+            Content="With checkbox" />
+        <Label
+            Grid.Row="8"
+            Grid.Column="0"
+            VerticalAlignment="Center"
+            Content="With textbox and checkbox" />
+        <Label
+            Grid.Row="9"
+            Grid.Column="0"
+            VerticalAlignment="Center"
+            Content="Long text" />
+        <Label
+            Grid.Row="10"
+            Grid.Column="0"
+            VerticalAlignment="Center"
+            Content="Long instruction" />
+        <Label
+            Grid.Row="11"
+            Grid.Column="0"
+            VerticalAlignment="Center"
+            Content="A nice example" />
+        <Label
+            Grid.Row="12"
+            Grid.Column="0"
+            VerticalAlignment="Center"
+            Content="All features" />
+        <Button
+            x:Name="buttonWpfMsgBoxWithoutTitle"
+            Grid.Row="1"
+            Grid.Column="2"
+            Height="24"
+            Margin="0,5"
+            Padding="10,0"
+            HorizontalAlignment="Center"
+            Click="ButtonWpfMsgBoxWithoutTitle_Click"
+            Content="Show" />
+        <Button
+            x:Name="buttonStdMsgBoxWithoutTitle"
+            Grid.Row="1"
+            Grid.Column="1"
+            Height="24"
+            Margin="0,5"
+            Padding="10,0"
+            HorizontalAlignment="Center"
+            Click="ButtonStdMsgBoxWithoutTitle_Click"
+            Content="Show" />
+        <Button
+            x:Name="buttonWpfMsgBoxWithText"
+            Grid.Row="2"
+            Grid.Column="2"
+            Height="24"
+            Margin="0,5"
+            Padding="10,0"
+            HorizontalAlignment="Center"
+            Click="ButtonWpfMsgBoxWithText_Click"
+            Content="Show" />
+        <Button
+            x:Name="buttonStdMsgBoxWithText"
+            Grid.Row="2"
+            Grid.Column="1"
+            Height="24"
+            Margin="0,5"
+            Padding="10,0"
+            HorizontalAlignment="Center"
+            Click="ButtonStdMsgBoxWithText_Click"
+            Content="Show" />
+        <Button
+            x:Name="buttonWpfMsgBoxWithIcon"
+            Grid.Row="3"
+            Grid.Column="2"
+            Height="24"
+            Margin="0,5"
+            Padding="10,0"
+            HorizontalAlignment="Center"
+            Click="ButtonWpfMsgBoxWithIcon_Click"
+            Content="Show" />
+        <Button
+            x:Name="buttonStdMsgBoxWithIcon"
+            Grid.Row="3"
+            Grid.Column="1"
+            Height="24"
+            Margin="0,5"
+            Padding="10,0"
+            HorizontalAlignment="Center"
+            Click="ButtonStdMsgBoxWithIcon_Click"
+            Content="Show" />
+        <Button
+            x:Name="buttonWpfMsgBoxWithHeader"
+            Grid.Row="4"
+            Grid.Column="2"
+            Height="24"
+            Margin="0,5"
+            Padding="10,0"
+            HorizontalAlignment="Center"
+            Click="ButtonWpfMsgBoxWithHeader_Click"
+            Content="Show" />
+        <Button
+            x:Name="buttonWpfMsgBoxCustomButtons"
+            Grid.Row="5"
+            Grid.Column="2"
+            Height="24"
+            Margin="0,5"
+            Padding="10,0"
+            HorizontalAlignment="Center"
+            Click="ButtonWpfMsgBoxCustomButtons_Click"
+            Content="Show" />
+        <Button
+            x:Name="buttonWpfMsgBoxWithTextBox"
+            Grid.Row="6"
+            Grid.Column="2"
+            Height="24"
+            Margin="0,5"
+            Padding="10,0"
+            HorizontalAlignment="Center"
+            Click="ButtonWpfMsgBoxWithTextBox_Click"
+            Content="Show" />
+        <Button
+            x:Name="buttonWpfMsgBoxWithCheckBox"
+            Grid.Row="7"
+            Grid.Column="2"
+            Height="24"
+            Margin="0,5"
+            Padding="10,0"
+            HorizontalAlignment="Center"
+            Click="ButtonWpfMsgBoxWithCheckBox_Click"
+            Content="Show" />
+        <Button
+            x:Name="buttonWpfMsgBoxWithTextBoxAndCheckBox"
+            Grid.Row="8"
+            Grid.Column="2"
+            Height="24"
+            Margin="0,5"
+            Padding="10,0"
+            HorizontalAlignment="Center"
+            Click="ButtonWpfMsgBoxWithTextBoxAndCheckBox_Click"
+            Content="Show" />
+        <Button
+            x:Name="buttonWpfMsgBoxLongText"
+            Grid.Row="9"
+            Grid.Column="2"
+            Height="24"
+            Margin="0,5"
+            Padding="10,0"
+            HorizontalAlignment="Center"
+            Click="ButtonWpfMsgBoxLongText_Click"
+            Content="Show" />
+        <Button
+            x:Name="buttonStdMsgBoxLongText"
+            Grid.Row="9"
+            Grid.Column="1"
+            Height="24"
+            Margin="0,5"
+            Padding="10,0"
+            HorizontalAlignment="Center"
+            Click="ButtonStdMsgBoxLongText_Click"
+            Content="Show" />
+        <Button
+            x:Name="buttonWpfMsgBoxLongInstruction"
+            Grid.Row="10"
+            Grid.Column="2"
+            Height="24"
+            Margin="0,5"
+            Padding="10,0"
+            HorizontalAlignment="Center"
+            Click="ButtonWpfMsgBoxLongInstruction_Click"
+            Content="Show" />
+        <Button
+            x:Name="buttonWpfMsgBoxNiceExample"
+            Grid.Row="11"
+            Grid.Column="2"
+            Height="24"
+            Margin="0,5"
+            Padding="10,0"
+            HorizontalAlignment="Center"
+            Click="ButtonWpfMsgBoxNiceExample_Click"
+            Content="Show" />
+        <Button
+            x:Name="buttonStdMsgBoxAllFeatures"
+            Grid.Row="12"
+            Grid.Column="1"
+            Height="24"
+            Margin="0,5"
+            Padding="10,0"
+            HorizontalAlignment="Center"
+            Click="ButtonStdMsgBoxAllFeatures_Click"
+            Content="Show" />
+        <Button
+            x:Name="buttonWpfMsgBoxAllFeatures"
+            Grid.Row="12"
+            Grid.Column="2"
+            Height="24"
+            Margin="0,5"
+            Padding="10,0"
+            HorizontalAlignment="Center"
+            Click="ButtonWpfMsgBoxAllFeatures_Click"
+            Content="Show" />
+    </Grid>
+</Window>
