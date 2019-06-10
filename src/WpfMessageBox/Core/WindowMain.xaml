@@ -67,6 +67,7 @@
                 <TextBlock
                     x:Name="textBlockMessage"
                     Text="[Message]"
+                    TextOptions.TextFormattingMode="Display"
                     TextWrapping="Wrap" />
             </ScrollViewer>
             <TextBox
@@ -75,14 +76,16 @@
                 Grid.Column="1"
                 Height="20"
                 Margin="0,10,0,0"
-                Text="[TextBox]" />
+                Text="[TextBox]"
+                TextOptions.TextFormattingMode="Display" />
             <CheckBox
                 x:Name="checkBox"
                 Grid.Row="3"
                 Grid.Column="1"
                 Margin="0,10,0,0"
                 HorizontalAlignment="Left"
-                Content="[CheckBox]" />
+                Content="[CheckBox]"
+                TextOptions.TextFormattingMode="Display" />
         </Grid>
         <Grid
             x:Name="gridButtons"
@@ -102,7 +105,8 @@
                 MinWidth="80"
                 Padding="10,0"
                 Click="ButtonOk_Click"
-                Content="[OK]" />
+                Content="[OK]"
+                TextOptions.TextFormattingMode="Display" />
             <Button
                 x:Name="buttonYes"
                 Grid.Column="1"
@@ -111,7 +115,8 @@
                 Margin="10,0,0,0"
                 Padding="10,0"
                 Click="ButtonYes_Click"
-                Content="[Yes]" />
+                Content="[Yes]"
+                TextOptions.TextFormattingMode="Display" />
             <Button
                 x:Name="buttonNo"
                 Grid.Column="2"
@@ -120,7 +125,8 @@
                 Margin="10,0,0,0"
                 Padding="10,0"
                 Click="ButtonNo_Click"
-                Content="[No]" />
+                Content="[No]"
+                TextOptions.TextFormattingMode="Display" />
             <Button
                 x:Name="buttonCancel"
                 Grid.Column="3"
@@ -129,7 +135,8 @@
                 Margin="10,0,0,0"
                 Padding="10,0"
                 Click="ButtonCancel_Click"
-                Content="[Cancel]" />
+                Content="[Cancel]"
+                TextOptions.TextFormattingMode="Display" />
         </Grid>
     </Grid>
 </Window>
