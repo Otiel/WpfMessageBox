@@ -1,3 +1,10 @@
+# 1.1.1
+
+## Bug fixes
+
+* Set MessageBox to be centered on its parent window.
+* Fix blurry font.
+
 # 1.1.0
 
 ## Improvements
