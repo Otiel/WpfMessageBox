@@ -5,7 +5,7 @@
 WpfMessageBox is a WPF message box implementation, aimed to be visually balanced between the default WPF style and the native .NET MessageBox. It offers the following features:
 
 * Returns the standard .NET [MessageBoxResult](https://docs.microsoft.com/en-us/dotnet/api/system.windows.messageboxresult)s.
-* Uses the standard MessageBox icons.
+* Uses the standard MessageBox [icons](https://docs.microsoft.com/en-us/windows/desktop/uxguide/vis-std-icons).
 * Ability to define custom buttons text.
 * Optional header text.
 * Optional TextBox.
