@@ -1,4 +1,4 @@
-# WpfMessageBox
+# WpfMessageBox [![Nuget](https://img.shields.io/nuget/v/WpfMessageBox.svg)](https://www.nuget.org/packages/WpfMessageBox)
 
 ## Description
 
