@@ -9,6 +9,7 @@
     MinHeight="150"
     MaxWidth="1000"
     x:ClassModifier="internal"
+    KeyDown="Window_KeyDown"
     ResizeMode="NoResize"
     ShowInTaskbar="False"
     SizeToContent="WidthAndHeight"

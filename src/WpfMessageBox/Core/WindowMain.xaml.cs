@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows;
+using System.Windows.Input;
 
 namespace WpfMessageBoxLibrary {
 
@@ -84,10 +85,10 @@ namespace WpfMessageBoxLibrary {
             DisplayImage(image);
 
             // Set default values
-            ButtonCancelText = "_Cancel";
-            ButtonNoText = "_No";
-            ButtonOkText = "_OK";
-            ButtonYesText = "_Yes";
+            ButtonCancelText = LocalizationHelper.GetCancelButtonText();
+            ButtonNoText = LocalizationHelper.GetNoButtonText();
+            ButtonOkText = LocalizationHelper.GetOkButtonText();
+            ButtonYesText = LocalizationHelper.GetYesButtonText();
             CheckBoxText = "";
             Header = "";
             IsCheckBoxChecked = false;
@@ -199,6 +200,15 @@ namespace WpfMessageBoxLibrary {
                     break;
                 default:
                     throw new NotImplementedException();
+            }
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e) {
+            if (e.Key == Key.C && Keyboard.Modifiers == ModifierKeys.Control) {
+                string content = String.IsNullOrWhiteSpace(Header) ? "" : Header + Environment.NewLine + Environment.NewLine;
+                content += Message;
+
+                Clipboard.SetText(content);
             }
         }
     }
