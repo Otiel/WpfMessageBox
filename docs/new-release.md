@@ -41,6 +41,6 @@ This repository follows [git flow](https://nvie.com/posts/a-successful-git-branc
 
 1. Under the `src\WpfMessageBox` folder, run the following command:
     ```
-    nuget.exe pack WpfMessageBox.csproj -properties Configuration=Release 
+    nuget.exe pack WpfMessageBox.csproj -properties Configuration=Release
     ```
 2. Login to [nuget.org](https://www.nuget.org) and upload the new package file.
