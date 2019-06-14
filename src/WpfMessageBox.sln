@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfMessageBox", "WpfMessageBox\WpfMessageBox.csproj", "{28C41280-1D3D-4AF8-B555-EFB939B664B3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo.csproj", "{D9E804ED-89E1-4D35-A395-AB82D29E407A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{28C41280-1D3D-4AF8-B555-EFB939B664B3} = {28C41280-1D3D-4AF8-B555-EFB939B664B3}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
