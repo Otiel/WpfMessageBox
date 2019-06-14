@@ -1,6 +1,6 @@
 # 1.2.0
 
-# New features
+## New features
 
 * Default button texts (Ok, Cancel, Yes, No) are now localized by looking for the localized strings in user32.dll.
 * Hitting Ctrl-C while focus is on the message box will save its content to the clipboard.
