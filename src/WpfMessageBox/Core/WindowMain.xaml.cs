@@ -85,10 +85,10 @@ namespace WpfMessageBoxLibrary {
             DisplayImage(image);
 
             // Set default values
-            ButtonCancelText = "_Cancel";
-            ButtonNoText = "_No";
-            ButtonOkText = "_OK";
-            ButtonYesText = "_Yes";
+            ButtonCancelText = LocalizationHelper.GetCancelButtonText();
+            ButtonNoText = LocalizationHelper.GetNoButtonText();
+            ButtonOkText = LocalizationHelper.GetOkButtonText();
+            ButtonYesText = LocalizationHelper.GetYesButtonText();
             CheckBoxText = "";
             Header = "";
             IsCheckBoxChecked = false;

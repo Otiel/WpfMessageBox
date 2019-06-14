@@ -54,6 +54,7 @@
     <Compile Include="Core\WpfMessageBox.cs" />
     <Compile Include="Core\WpfMessageBoxProperties.cs" />
     <Compile Include="Helpers\Extensions.cs" />
+    <Compile Include="Helpers\LocalizationHelper.cs" />
     <Compile Include="Helpers\WindowHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Core\WindowMain.xaml.cs">
