@@ -10,37 +10,37 @@ namespace WpfMessageBoxLibrary
     {
         public string ButtonCancelText
         {
-            get { return ButtonCancel.Content.ToString(); }
-            set { ButtonCancel.Content = value.AddMnemonic(); }
+            get => ButtonCancel.Content.ToString();
+            set => ButtonCancel.Content = value.AddMnemonic();
         }
 
         public string ButtonNoText
         {
-            get { return ButtonNo.Content.ToString(); }
-            set { ButtonNo.Content = value.AddMnemonic(); }
+            get => ButtonNo.Content.ToString();
+            set => ButtonNo.Content = value.AddMnemonic();
         }
 
         public string ButtonOkText
         {
-            get { return ButtonOk.Content.ToString(); }
-            set { ButtonOk.Content = value.AddMnemonic(); }
+            get => ButtonOk.Content.ToString();
+            set => ButtonOk.Content = value.AddMnemonic();
         }
 
         public string ButtonYesText
         {
-            get { return ButtonYes.Content.ToString(); }
-            set { ButtonYes.Content = value.AddMnemonic(); }
+            get => ButtonYes.Content.ToString();
+            set => ButtonYes.Content = value.AddMnemonic();
         }
 
         public string CheckBoxText
         {
-            get { return CheckBox.Content.ToString(); }
-            set { CheckBox.Content = value.AddMnemonic(); }
+            get => CheckBox.Content.ToString();
+            set => CheckBox.Content = value.AddMnemonic();
         }
 
         public string Header
         {
-            get { return TextBlockHeader.Text; }
+            get => TextBlockHeader.Text;
             set
             {
                 TextBlockHeader.Text = value;
@@ -50,25 +50,25 @@ namespace WpfMessageBoxLibrary
 
         public bool IsCheckBoxChecked
         {
-            get { return CheckBox.IsChecked ?? false; }
-            set { CheckBox.IsChecked = value; }
+            get => CheckBox.IsChecked ?? false;
+            set => CheckBox.IsChecked = value;
         }
 
         public bool IsCheckBoxVisible
         {
-            get { return CheckBox.Visibility == Visibility.Visible; }
-            set { CheckBox.Visibility = value ? Visibility.Visible : Visibility.Collapsed; }
+            get => CheckBox.Visibility == Visibility.Visible;
+            set => CheckBox.Visibility = value ? Visibility.Visible : Visibility.Collapsed;
         }
 
         public bool IsTextBoxVisible
         {
-            get { return TextBox.Visibility == Visibility.Visible; }
-            set { TextBox.Visibility = value ? Visibility.Visible : Visibility.Collapsed; }
+            get => TextBox.Visibility == Visibility.Visible;
+            set => TextBox.Visibility = value ? Visibility.Visible : Visibility.Collapsed;
         }
 
         public string Message
         {
-            get { return TextBlockMessage.Text; }
+            get => TextBlockMessage.Text;
             set
             {
                 TextBlockMessage.Text = value;
@@ -80,8 +80,8 @@ namespace WpfMessageBoxLibrary
 
         public string TextBoxText
         {
-            get { return TextBox.Text; }
-            set { TextBox.Text = value; }
+            get => TextBox.Text;
+            set => TextBox.Text = value;
         }
 
         public WindowMain(string message, MessageBoxButton button, MessageBoxImage image)
