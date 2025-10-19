@@ -3,41 +3,49 @@ using System.Text;
 using System.Windows;
 using WpfMessageBoxLibrary;
 
-namespace Demo {
-
-    public partial class WindowMain {
-
-        public WindowMain() {
+namespace Demo
+{
+    public partial class WindowMain
+    {
+        public WindowMain()
+        {
             InitializeComponent();
         }
 
-        private void ButtonStdMsgBoxAllFeatures_Click(object sender, RoutedEventArgs e) {
-            MessageBoxResult result = MessageBox.Show(this, GetLongSampleText(), "Some title", MessageBoxButton.YesNoCancel, MessageBoxImage.Error);
+        private void ButtonStdMsgBoxAllFeatures_Click(object sender, RoutedEventArgs e)
+        {
+            var result = MessageBox.Show(this, GetLongSampleText(), "Some title", MessageBoxButton.YesNoCancel, MessageBoxImage.Error);
             DisplayResult(result);
         }
 
-        private void ButtonStdMsgBoxLongText_Click(object sender, RoutedEventArgs e) {
-            MessageBoxResult result = MessageBox.Show(this, GetLongSampleText(), "Some title", MessageBoxButton.YesNoCancel, MessageBoxImage.Error);
+        private void ButtonStdMsgBoxLongText_Click(object sender, RoutedEventArgs e)
+        {
+            var result = MessageBox.Show(this, GetLongSampleText(), "Some title", MessageBoxButton.YesNoCancel, MessageBoxImage.Error);
             DisplayResult(result);
         }
 
-        private void ButtonStdMsgBoxWithIcon_Click(object sender, RoutedEventArgs e) {
-            MessageBoxResult result = MessageBox.Show(this, "Some text", "Some title", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+        private void ButtonStdMsgBoxWithIcon_Click(object sender, RoutedEventArgs e)
+        {
+            var result = MessageBox.Show(this, "Some text", "Some title", MessageBoxButton.OK, MessageBoxImage.Exclamation);
             DisplayResult(result);
         }
 
-        private void ButtonStdMsgBoxWithoutTitle_Click(object sender, RoutedEventArgs e) {
-            MessageBoxResult result = MessageBox.Show(this, "Some text", "", MessageBoxButton.OKCancel);
+        private void ButtonStdMsgBoxWithoutTitle_Click(object sender, RoutedEventArgs e)
+        {
+            var result = MessageBox.Show(this, "Some text", "", MessageBoxButton.OKCancel);
             DisplayResult(result);
         }
 
-        private void ButtonStdMsgBoxWithText_Click(object sender, RoutedEventArgs e) {
-            MessageBoxResult result = MessageBox.Show(this, "Some text", "Some title", MessageBoxButton.YesNoCancel);
+        private void ButtonStdMsgBoxWithText_Click(object sender, RoutedEventArgs e)
+        {
+            var result = MessageBox.Show(this, "Some text", "Some title", MessageBoxButton.YesNoCancel);
             DisplayResult(result);
         }
 
-        private void ButtonWpfMsgBoxAllFeatures_Click(object sender, RoutedEventArgs e) {
-            var msgProperties = new WpfMessageBoxProperties() {
+        private void ButtonWpfMsgBoxAllFeatures_Click(object sender, RoutedEventArgs e)
+        {
+            var msgProperties = new WpfMessageBoxProperties
+            {
                 Button = MessageBoxButton.YesNoCancel,
                 ButtonCancelText = "Cancel, cancel!",
                 ButtonNoText = "Please no",
@@ -53,12 +61,14 @@ namespace Demo {
                 Title = "Some title",
             };
 
-            MessageBoxResult result = WpfMessageBox.Show(this, ref msgProperties);
+            var result = WpfMessageBox.Show(this, ref msgProperties);
             DisplayResult(result, msgProperties);
         }
 
-        private void ButtonWpfMsgBoxCustomButtons_Click(object sender, RoutedEventArgs e) {
-            var msgProperties = new WpfMessageBoxProperties() {
+        private void ButtonWpfMsgBoxCustomButtons_Click(object sender, RoutedEventArgs e)
+        {
+            var msgProperties = new WpfMessageBoxProperties
+            {
                 Button = MessageBoxButton.YesNoCancel,
                 ButtonCancelText = "Cancel, cancel!",
                 ButtonNoText = "Please no",
@@ -68,12 +78,14 @@ namespace Demo {
                 Title = "Some title",
             };
 
-            MessageBoxResult result = WpfMessageBox.Show(this, ref msgProperties);
+            var result = WpfMessageBox.Show(this, ref msgProperties);
             DisplayResult(result);
         }
 
-        private void ButtonWpfMsgBoxLongInstruction_Click(object sender, RoutedEventArgs e) {
-            var msgProperties = new  WpfMessageBoxProperties() {
+        private void ButtonWpfMsgBoxLongInstruction_Click(object sender, RoutedEventArgs e)
+        {
+            var msgProperties = new WpfMessageBoxProperties
+            {
                 Button = MessageBoxButton.OK,
                 Header = "Here we have an example of a very very very very very very very very very very very very very very very very very long instruction text.",
                 Image = MessageBoxImage.Information,
@@ -81,17 +93,20 @@ namespace Demo {
                 Title = "Some title",
             };
 
-            MessageBoxResult result = WpfMessageBox.Show(this, ref msgProperties);
+            var result = WpfMessageBox.Show(this, ref msgProperties);
             DisplayResult(result);
         }
 
-        private void ButtonWpfMsgBoxLongText_Click(object sender, RoutedEventArgs e) {
-            MessageBoxResult result = WpfMessageBox.Show(this, GetLongSampleText(), "Some title", MessageBoxButton.YesNoCancel, MessageBoxImage.Error);
+        private void ButtonWpfMsgBoxLongText_Click(object sender, RoutedEventArgs e)
+        {
+            var result = WpfMessageBox.Show(this, GetLongSampleText(), "Some title", MessageBoxButton.YesNoCancel, MessageBoxImage.Error);
             DisplayResult(result);
         }
 
-        private void ButtonWpfMsgBoxNiceExample_Click(object sender, RoutedEventArgs e) {
-            var msgProperties = new WpfMessageBoxProperties() {
+        private void ButtonWpfMsgBoxNiceExample_Click(object sender, RoutedEventArgs e)
+        {
+            var msgProperties = new WpfMessageBoxProperties
+            {
                 Button = MessageBoxButton.OKCancel,
                 ButtonOkText = "Set name",
                 CheckBoxText = "Don't ask again",
@@ -104,12 +119,14 @@ namespace Demo {
                 Title = "A nice example",
             };
 
-            MessageBoxResult result = WpfMessageBox.Show(this, ref msgProperties);
+            var result = WpfMessageBox.Show(this, ref msgProperties);
             DisplayResult(result, msgProperties);
         }
 
-        private void ButtonWpfMsgBoxWithCheckBox_Click(object sender, RoutedEventArgs e) {
-            var msgProperties = new WpfMessageBoxProperties() {
+        private void ButtonWpfMsgBoxWithCheckBox_Click(object sender, RoutedEventArgs e)
+        {
+            var msgProperties = new WpfMessageBoxProperties
+            {
                 Button = MessageBoxButton.OKCancel,
                 CheckBoxText = "I've pre-checked this for you",
                 IsCheckBoxChecked = true,
@@ -118,12 +135,14 @@ namespace Demo {
                 Title = "Some title",
             };
 
-            MessageBoxResult result = WpfMessageBox.Show(this, ref msgProperties);
+            var result = WpfMessageBox.Show(this, ref msgProperties);
             DisplayResult(result, msgProperties);
         }
 
-        private void ButtonWpfMsgBoxWithHeader_Click(object sender, RoutedEventArgs e) {
-            var msgProperties = new  WpfMessageBoxProperties() {
+        private void ButtonWpfMsgBoxWithHeader_Click(object sender, RoutedEventArgs e)
+        {
+            var msgProperties = new WpfMessageBoxProperties
+            {
                 Button = MessageBoxButton.OK,
                 Header = "Some header",
                 Image = MessageBoxImage.Exclamation,
@@ -131,27 +150,32 @@ namespace Demo {
                 Title = "Some title",
             };
 
-            MessageBoxResult result = WpfMessageBox.Show(this, ref msgProperties);
+            var result = WpfMessageBox.Show(this, ref msgProperties);
             DisplayResult(result);
         }
 
-        private void ButtonWpfMsgBoxWithIcon_Click(object sender, RoutedEventArgs e) {
-            MessageBoxResult result = WpfMessageBox.Show(this, "Some text", "Some title", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+        private void ButtonWpfMsgBoxWithIcon_Click(object sender, RoutedEventArgs e)
+        {
+            var result = WpfMessageBox.Show(this, "Some text", "Some title", MessageBoxButton.OK, MessageBoxImage.Exclamation);
             DisplayResult(result);
         }
 
-        private void ButtonWpfMsgBoxWithoutTitle_Click(object sender, RoutedEventArgs e) {
-            MessageBoxResult result = WpfMessageBox.Show(this, "Some text", "", MessageBoxButton.OKCancel);
+        private void ButtonWpfMsgBoxWithoutTitle_Click(object sender, RoutedEventArgs e)
+        {
+            var result = WpfMessageBox.Show(this, "Some text", "", MessageBoxButton.OKCancel);
             DisplayResult(result);
         }
 
-        private void ButtonWpfMsgBoxWithText_Click(object sender, RoutedEventArgs e) {
-            MessageBoxResult result = WpfMessageBox.Show(this, "Some text", "Some title", MessageBoxButton.YesNoCancel);
+        private void ButtonWpfMsgBoxWithText_Click(object sender, RoutedEventArgs e)
+        {
+            var result = WpfMessageBox.Show(this, "Some text", "Some title", MessageBoxButton.YesNoCancel);
             DisplayResult(result);
         }
 
-        private void ButtonWpfMsgBoxWithTextBox_Click(object sender, RoutedEventArgs e) {
-            var msgProperties = new WpfMessageBoxProperties() {
+        private void ButtonWpfMsgBoxWithTextBox_Click(object sender, RoutedEventArgs e)
+        {
+            var msgProperties = new WpfMessageBoxProperties
+            {
                 Button = MessageBoxButton.OKCancel,
                 IsTextBoxVisible = true,
                 Text = "Some text",
@@ -159,12 +183,14 @@ namespace Demo {
                 Title = "Some title",
             };
 
-            MessageBoxResult result = WpfMessageBox.Show(this, ref msgProperties);
+            var result = WpfMessageBox.Show(this, ref msgProperties);
             DisplayResult(result, msgProperties);
         }
 
-        private void ButtonWpfMsgBoxWithTextBoxAndCheckBox_Click(object sender, RoutedEventArgs e) {
-            var msgProperties = new WpfMessageBoxProperties() {
+        private void ButtonWpfMsgBoxWithTextBoxAndCheckBox_Click(object sender, RoutedEventArgs e)
+        {
+            var msgProperties = new WpfMessageBoxProperties
+            {
                 Button = MessageBoxButton.OKCancel,
                 CheckBoxText = "I've pre-checked this for you",
                 IsCheckBoxChecked = true,
@@ -174,15 +200,17 @@ namespace Demo {
                 Title = "Some title",
             };
 
-            MessageBoxResult result = WpfMessageBox.Show(this, ref msgProperties);
+            var result = WpfMessageBox.Show(this, ref msgProperties);
             DisplayResult(result, msgProperties);
         }
 
-        private void DisplayResult(MessageBoxResult result) {
+        private void DisplayResult(MessageBoxResult result)
+        {
             WpfMessageBox.Show(this, "Result is: DialogResult." + result, "Result", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
-        private void DisplayResult(MessageBoxResult result, WpfMessageBoxProperties msgProperties) {
+        private void DisplayResult(MessageBoxResult result, WpfMessageBoxProperties msgProperties)
+        {
             WpfMessageBox.Show(
                 this,
                 "Result is: DialogResult." + result + Environment.NewLine +
@@ -190,18 +218,23 @@ namespace Demo {
                 "Textbox value is: " + msgProperties.TextBoxText);
         }
 
-        private string GetLongSampleText() {
+        private string GetLongSampleText()
+        {
             var longText = new StringBuilder();
-            for (int row = 0; row < 20; row++) {
-                for (int column = 0; column < 30; column++) {
+            for (var row = 0; row < 20; row++)
+            {
+                for (var column = 0; column < 30; column++)
+                {
                     longText.Append(row);
                     longText.Append('-');
                     longText.Append(column);
                     longText.Append(' ');
                 }
+
                 longText.Append(Environment.NewLine);
                 longText.Append(Environment.NewLine);
             }
+
             return longText.ToString();
         }
     }

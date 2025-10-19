@@ -1,13 +1,13 @@
 ﻿using System.Windows;
 
 // ReSharper disable once CheckNamespace
-namespace WpfMessageBoxLibrary {
-
+namespace WpfMessageBoxLibrary
+{
     /// <summary>
     /// The properties of a <see cref="WpfMessageBox" />.
     /// </summary>
-    public sealed class WpfMessageBoxProperties {
-
+    public sealed class WpfMessageBoxProperties
+    {
         /// <summary>
         /// Gets or sets the buttons used.
         /// </summary>
@@ -81,7 +81,8 @@ namespace WpfMessageBoxLibrary {
         /// <summary>
         /// Initializes a new instance of the <see cref="WpfMessageBoxProperties" /> class.
         /// </summary>
-        public WpfMessageBoxProperties() {
+        public WpfMessageBoxProperties()
+        {
             // Set default values
             ButtonCancelText = "_Cancel";
             ButtonNoText = "_No";

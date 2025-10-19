@@ -4,78 +4,88 @@ using System.Windows;
 using System.Windows.Input;
 
 // ReSharper disable once CheckNamespace
-namespace WpfMessageBoxLibrary {
-
-    internal sealed partial class WindowMain {
-
-        public string ButtonCancelText {
+namespace WpfMessageBoxLibrary
+{
+    internal sealed partial class WindowMain
+    {
+        public string ButtonCancelText
+        {
             get { return ButtonCancel.Content.ToString(); }
             set { ButtonCancel.Content = value.AddMnemonic(); }
         }
 
-        public string ButtonNoText {
+        public string ButtonNoText
+        {
             get { return ButtonNo.Content.ToString(); }
             set { ButtonNo.Content = value.AddMnemonic(); }
         }
 
-        public string ButtonOkText {
+        public string ButtonOkText
+        {
             get { return ButtonOk.Content.ToString(); }
             set { ButtonOk.Content = value.AddMnemonic(); }
         }
 
-        public string ButtonYesText {
+        public string ButtonYesText
+        {
             get { return ButtonYes.Content.ToString(); }
             set { ButtonYes.Content = value.AddMnemonic(); }
         }
 
-        public string CheckBoxText {
+        public string CheckBoxText
+        {
             get { return CheckBox.Content.ToString(); }
             set { CheckBox.Content = value.AddMnemonic(); }
         }
 
-        public string Header {
-            get {
-                return TextBlockHeader.Text;
-            }
-            set {
+        public string Header
+        {
+            get { return TextBlockHeader.Text; }
+            set
+            {
                 TextBlockHeader.Text = value;
-                TextBlockHeader.Visibility = String.IsNullOrWhiteSpace(value) ? Visibility.Collapsed : Visibility.Visible;
+                TextBlockHeader.Visibility = string.IsNullOrWhiteSpace(value) ? Visibility.Collapsed : Visibility.Visible;
             }
         }
 
-        public bool IsCheckBoxChecked {
+        public bool IsCheckBoxChecked
+        {
             get { return CheckBox.IsChecked ?? false; }
             set { CheckBox.IsChecked = value; }
         }
 
-        public bool IsCheckBoxVisible {
+        public bool IsCheckBoxVisible
+        {
             get { return CheckBox.Visibility == Visibility.Visible; }
             set { CheckBox.Visibility = value ? Visibility.Visible : Visibility.Collapsed; }
         }
 
-        public bool IsTextBoxVisible {
+        public bool IsTextBoxVisible
+        {
             get { return TextBox.Visibility == Visibility.Visible; }
             set { TextBox.Visibility = value ? Visibility.Visible : Visibility.Collapsed; }
         }
 
-        public string Message {
-            get {
-                return TextBlockMessage.Text;
-            }
-            set {
+        public string Message
+        {
+            get { return TextBlockMessage.Text; }
+            set
+            {
                 TextBlockMessage.Text = value;
-                ScrollViewerMessage.Visibility = String.IsNullOrWhiteSpace(value) ? Visibility.Collapsed : Visibility.Visible;
+                ScrollViewerMessage.Visibility = string.IsNullOrWhiteSpace(value) ? Visibility.Collapsed : Visibility.Visible;
             }
         }
 
         public MessageBoxResult Result { get; set; }
 
-        public string TextBoxText {
+        public string TextBoxText
+        {
             get { return TextBox.Text; }
             set { TextBox.Text = value; }
         }
 
-        public WindowMain(string message, MessageBoxButton button, MessageBoxImage image) {
+        public WindowMain(string message, MessageBoxButton button, MessageBoxImage image)
+        {
             InitializeComponent();
 
             Message = message;
@@ -99,33 +109,40 @@ namespace WpfMessageBoxLibrary {
             Title = "";
         }
 
-        protected override void OnSourceInitialized(EventArgs e) {
+        protected override void OnSourceInitialized(EventArgs e)
+        {
             this.RemoveIconAndCloseButtons();
             base.OnSourceInitialized(e);
         }
 
-        private void ButtonCancel_Click(object sender, RoutedEventArgs e) {
+        private void ButtonCancel_Click(object sender, RoutedEventArgs e)
+        {
             Result = MessageBoxResult.Cancel;
             Close();
         }
 
-        private void ButtonNo_Click(object sender, RoutedEventArgs e) {
+        private void ButtonNo_Click(object sender, RoutedEventArgs e)
+        {
             Result = MessageBoxResult.No;
             Close();
         }
 
-        private void ButtonOk_Click(object sender, RoutedEventArgs e) {
+        private void ButtonOk_Click(object sender, RoutedEventArgs e)
+        {
             Result = MessageBoxResult.OK;
             Close();
         }
 
-        private void ButtonYes_Click(object sender, RoutedEventArgs e) {
+        private void ButtonYes_Click(object sender, RoutedEventArgs e)
+        {
             Result = MessageBoxResult.Yes;
             Close();
         }
 
-        private void DisplayButtons(MessageBoxButton button) {
-            switch (button) {
+        private void DisplayButtons(MessageBoxButton button)
+        {
+            switch (button)
+            {
                 case MessageBoxButton.OK:
                     ButtonCancel.Visibility = Visibility.Collapsed;
                     ButtonNo.Visibility = Visibility.Collapsed;
@@ -155,8 +172,10 @@ namespace WpfMessageBoxLibrary {
             }
         }
 
-        private void DisplayImage(MessageBoxImage image) {
-            switch (image) {
+        private void DisplayImage(MessageBoxImage image)
+        {
+            switch (image)
+            {
                 case MessageBoxImage.Information:
                     // Also covers MessageBoxImage.Asterisk
                     ImageIcon.Source = SystemIcons.Information.ToImageSource();
@@ -181,8 +200,10 @@ namespace WpfMessageBoxLibrary {
             ImageIcon.Visibility = ImageIcon.Source == null ? Visibility.Collapsed : Visibility.Visible;
         }
 
-        private void SetDefaultAndCancelButtons(MessageBoxButton button) {
-            switch (button) {
+        private void SetDefaultAndCancelButtons(MessageBoxButton button)
+        {
+            switch (button)
+            {
                 case MessageBoxButton.OK:
                     ButtonOk.IsDefault = true;
                     ButtonOk.IsCancel = true;
@@ -204,9 +225,11 @@ namespace WpfMessageBoxLibrary {
             }
         }
 
-        private void Window_KeyDown(object sender, KeyEventArgs e) {
-            if (e.Key == Key.C && Keyboard.Modifiers == ModifierKeys.Control) {
-                string content = String.IsNullOrWhiteSpace(Header) ? "" : Header + Environment.NewLine + Environment.NewLine;
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.C && Keyboard.Modifiers == ModifierKeys.Control)
+            {
+                var content = string.IsNullOrWhiteSpace(Header) ? "" : Header + Environment.NewLine + Environment.NewLine;
                 content += Message;
 
                 Clipboard.SetText(content);
