@@ -14,6 +14,7 @@
     <VersionPrefix>1.2.0</VersionPrefix>
 
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <!-- Package properties -->
     <PackageId>WpfMessageBox</PackageId>
     <Authors>Otiel</Authors>
