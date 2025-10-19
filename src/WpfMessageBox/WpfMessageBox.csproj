@@ -20,6 +20,7 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/Otiel/WpfMessageBox</PackageProjectUrl>
     <PackageIconUrl>https://github.com/Otiel/WpfMessageBox/raw/master/docs/images/Icon.64x64.png</PackageIconUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>See CHANGELOG on source repository.</PackageReleaseNotes>
     <PackageTags>wpf messagebox message box</PackageTags>
   </PropertyGroup>
@@ -31,5 +32,9 @@
   <ItemGroup Condition=" '$(TargetFramework)' == 'net9.0-windows' ">
     <PackageReference Include="System.Drawing.Common" Version="9.0.10" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\"/>
+</ItemGroup>
 
 </Project>
