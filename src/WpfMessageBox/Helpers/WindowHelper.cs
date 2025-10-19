@@ -3,6 +3,7 @@ using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Interop;
 
+// ReSharper disable once CheckNamespace
 namespace WpfMessageBoxLibrary {
 
     internal static class WindowHelper {

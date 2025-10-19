@@ -2,6 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Text;
 
+// ReSharper disable once CheckNamespace
 namespace WpfMessageBoxLibrary {
 
     internal static class LocalizationHelper {

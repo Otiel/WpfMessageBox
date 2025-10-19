@@ -4,6 +4,7 @@ using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
+// ReSharper disable once CheckNamespace
 namespace WpfMessageBoxLibrary {
 
     internal static class Extensions {

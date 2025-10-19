@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows;
 using System.Windows.Input;
 
+// ReSharper disable once CheckNamespace
 namespace WpfMessageBoxLibrary {
 
     internal sealed partial class WindowMain {
