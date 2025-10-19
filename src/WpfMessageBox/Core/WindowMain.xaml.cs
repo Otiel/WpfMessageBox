@@ -5,7 +5,7 @@ using System.Windows.Input;
 
 namespace WpfMessageBoxLibrary {
 
-    internal partial class WindowMain {
+    internal sealed partial class WindowMain {
 
         public string ButtonCancelText {
             get { return ButtonCancel.Content.ToString(); }

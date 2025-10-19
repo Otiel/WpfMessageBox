@@ -5,7 +5,7 @@ namespace WpfMessageBoxLibrary {
     /// <summary>
     /// The properties of a <see cref="WpfMessageBox" />.
     /// </summary>
-    public class WpfMessageBoxProperties {
+    public sealed class WpfMessageBoxProperties {
 
         /// <summary>
         /// Gets or sets the buttons used.

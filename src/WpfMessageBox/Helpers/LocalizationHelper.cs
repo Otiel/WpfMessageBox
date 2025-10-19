@@ -6,7 +6,7 @@ namespace WpfMessageBoxLibrary {
 
     internal static class LocalizationHelper {
 
-        private class UserStringNotFoundException: Exception {
+        private sealed class UserStringNotFoundException: Exception {
         }
 
         private const string DEFAULT_CANCEL_BUTTON_TEXT = "_Cancel";
