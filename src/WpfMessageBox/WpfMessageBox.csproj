@@ -1,10 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <!-- Assembly attributes -->
+    <AssemblyTitle>WpfMessageBox</AssemblyTitle>
+    <Description>A WPF message box, with optional features like custom buttons, textbox and checkbox.</Description>
+    <Product>WpfMessageBox</Product>
+    <Copyright>https://github.com/Otiel/WpfMessageBox</Copyright>
+
     <AppendPlatformToOutputPath>false</AppendPlatformToOutputPath>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <TargetFramework>net48</TargetFramework>
     <UseWPF>true</UseWPF>
+
+    <VersionPrefix>1.2.0</VersionPrefix>
   </PropertyGroup>
-  
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <VersionSuffix>pre$([System.DateTime]::Now.ToString("yyyyMMdd-HHmmss"))</VersionSuffix>
+  </PropertyGroup>
+
 </Project>
