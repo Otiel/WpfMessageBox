@@ -12,6 +12,15 @@
     <UseWPF>true</UseWPF>
 
     <VersionPrefix>1.2.0</VersionPrefix>
+
+    <!-- Package properties -->
+    <PackageId>WpfMessageBox</PackageId>
+    <Authors>Otiel</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/Otiel/WpfMessageBox</PackageProjectUrl>
+    <PackageIconUrl>https://github.com/Otiel/WpfMessageBox/raw/master/docs/images/Icon.64x64.png</PackageIconUrl>
+    <PackageReleaseNotes>See CHANGELOG on source repository.</PackageReleaseNotes>
+    <PackageTags>wpf messagebox message box</PackageTags>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
