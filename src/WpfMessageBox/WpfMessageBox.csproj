@@ -5,7 +5,7 @@
     <AssemblyTitle>WpfMessageBox</AssemblyTitle>
     <Description>A WPF message box, with optional features like custom buttons, textbox and checkbox.</Description>
     <Product>WpfMessageBox</Product>
-    <Copyright>https://github.com/Otiel/WpfMessageBox</Copyright>
+    <Copyright>ⓒ Otiel $([System.DateTime]::Now.Year)</Copyright>
 
     <AppendPlatformToOutputPath>false</AppendPlatformToOutputPath>
     <TargetFramework>net48</TargetFramework>

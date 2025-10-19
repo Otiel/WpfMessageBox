@@ -5,7 +5,7 @@
     <AssemblyTitle>WpfMessageBoxDemo</AssemblyTitle>
     <Description>Application used to demonstrate the capabilities of the WpfMessageBox</Description>
     <Product>WpfMessageBoxDemo</Product>
-    <Copyright>https://github.com/Otiel/WpfMessageBox</Copyright>
+    <Copyright>ⓒ Otiel $([System.DateTime]::Now.Year)</Copyright>
 
     <AppendPlatformToOutputPath>false</AppendPlatformToOutputPath>
     <OutputType>WinExe</OutputType>
