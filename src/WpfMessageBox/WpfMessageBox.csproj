@@ -12,6 +12,19 @@
     <UseWPF>true</UseWPF>
 
     <VersionPrefix>1.2.0</VersionPrefix>
+
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <!-- Package properties -->
+    <PackageId>WpfMessageBox</PackageId>
+    <Authors>Otiel</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/Otiel/WpfMessageBox</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Otiel/WpfMessageBox</PackageProjectUrl>
+    <PackageIcon>Icon.64x64.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReleaseNotes>See CHANGELOG on source repository.</PackageReleaseNotes>
+    <PackageTags>wpf messagebox message box</PackageTags>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
@@ -21,5 +34,10 @@
   <ItemGroup Condition=" '$(TargetFramework)' == 'net9.0-windows' ">
     <PackageReference Include="System.Drawing.Common" Version="9.0.10" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\"/>
+    <None Include="..\..\docs\images\Icon.64x64.png" Pack="true" PackagePath="\"/>
+</ItemGroup>
 
 </Project>
