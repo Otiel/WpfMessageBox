@@ -13,6 +13,6 @@
     <description>$description$</description>
     <releaseNotes>See CHANGELOG on source repository.</releaseNotes>
     <copyright>Copyright 2019</copyright>
-    <tags>wpf messagebox</tags>
+    <tags>wpf messagebox message box</tags>
   </metadata>
 </package>
