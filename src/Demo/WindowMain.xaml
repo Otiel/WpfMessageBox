@@ -8,7 +8,7 @@
     ResizeMode="CanMinimize"
     SizeToContent="WidthAndHeight"
     mc:Ignorable="d">
-    <Grid x:Name="gridMain" Margin="10">
+    <Grid x:Name="GridMain" Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
@@ -30,14 +30,14 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Label
-            x:Name="labelStandardMessageBox"
+            x:Name="LabelStandardMessageBox"
             Grid.Row="0"
             Grid.Column="1"
             HorizontalAlignment="Center"
             Content="Standard MessageBox"
             FontSize="20" />
         <Label
-            x:Name="labelWpfMessageBox"
+            x:Name="LabelWpfMessageBox"
             Grid.Row="0"
             Grid.Column="2"
             HorizontalAlignment="Center"
@@ -104,7 +104,7 @@
             VerticalAlignment="Center"
             Content="All features" />
         <Button
-            x:Name="buttonWpfMsgBoxWithoutTitle"
+            x:Name="ButtonWpfMsgBoxWithoutTitle"
             Grid.Row="1"
             Grid.Column="2"
             Height="24"
@@ -114,7 +114,7 @@
             Click="ButtonWpfMsgBoxWithoutTitle_Click"
             Content="Show" />
         <Button
-            x:Name="buttonStdMsgBoxWithoutTitle"
+            x:Name="ButtonStdMsgBoxWithoutTitle"
             Grid.Row="1"
             Grid.Column="1"
             Height="24"
@@ -124,7 +124,7 @@
             Click="ButtonStdMsgBoxWithoutTitle_Click"
             Content="Show" />
         <Button
-            x:Name="buttonWpfMsgBoxWithText"
+            x:Name="ButtonWpfMsgBoxWithText"
             Grid.Row="2"
             Grid.Column="2"
             Height="24"
@@ -134,7 +134,7 @@
             Click="ButtonWpfMsgBoxWithText_Click"
             Content="Show" />
         <Button
-            x:Name="buttonStdMsgBoxWithText"
+            x:Name="ButtonStdMsgBoxWithText"
             Grid.Row="2"
             Grid.Column="1"
             Height="24"
@@ -144,7 +144,7 @@
             Click="ButtonStdMsgBoxWithText_Click"
             Content="Show" />
         <Button
-            x:Name="buttonWpfMsgBoxWithIcon"
+            x:Name="ButtonWpfMsgBoxWithIcon"
             Grid.Row="3"
             Grid.Column="2"
             Height="24"
@@ -154,7 +154,7 @@
             Click="ButtonWpfMsgBoxWithIcon_Click"
             Content="Show" />
         <Button
-            x:Name="buttonStdMsgBoxWithIcon"
+            x:Name="ButtonStdMsgBoxWithIcon"
             Grid.Row="3"
             Grid.Column="1"
             Height="24"
@@ -164,7 +164,7 @@
             Click="ButtonStdMsgBoxWithIcon_Click"
             Content="Show" />
         <Button
-            x:Name="buttonWpfMsgBoxWithHeader"
+            x:Name="ButtonWpfMsgBoxWithHeader"
             Grid.Row="4"
             Grid.Column="2"
             Height="24"
@@ -174,7 +174,7 @@
             Click="ButtonWpfMsgBoxWithHeader_Click"
             Content="Show" />
         <Button
-            x:Name="buttonWpfMsgBoxCustomButtons"
+            x:Name="ButtonWpfMsgBoxCustomButtons"
             Grid.Row="5"
             Grid.Column="2"
             Height="24"
@@ -184,7 +184,7 @@
             Click="ButtonWpfMsgBoxCustomButtons_Click"
             Content="Show" />
         <Button
-            x:Name="buttonWpfMsgBoxWithTextBox"
+            x:Name="ButtonWpfMsgBoxWithTextBox"
             Grid.Row="6"
             Grid.Column="2"
             Height="24"
@@ -194,7 +194,7 @@
             Click="ButtonWpfMsgBoxWithTextBox_Click"
             Content="Show" />
         <Button
-            x:Name="buttonWpfMsgBoxWithCheckBox"
+            x:Name="ButtonWpfMsgBoxWithCheckBox"
             Grid.Row="7"
             Grid.Column="2"
             Height="24"
@@ -204,7 +204,7 @@
             Click="ButtonWpfMsgBoxWithCheckBox_Click"
             Content="Show" />
         <Button
-            x:Name="buttonWpfMsgBoxWithTextBoxAndCheckBox"
+            x:Name="ButtonWpfMsgBoxWithTextBoxAndCheckBox"
             Grid.Row="8"
             Grid.Column="2"
             Height="24"
@@ -214,7 +214,7 @@
             Click="ButtonWpfMsgBoxWithTextBoxAndCheckBox_Click"
             Content="Show" />
         <Button
-            x:Name="buttonWpfMsgBoxLongText"
+            x:Name="ButtonWpfMsgBoxLongText"
             Grid.Row="9"
             Grid.Column="2"
             Height="24"
@@ -224,7 +224,7 @@
             Click="ButtonWpfMsgBoxLongText_Click"
             Content="Show" />
         <Button
-            x:Name="buttonStdMsgBoxLongText"
+            x:Name="ButtonStdMsgBoxLongText"
             Grid.Row="9"
             Grid.Column="1"
             Height="24"
@@ -234,7 +234,7 @@
             Click="ButtonStdMsgBoxLongText_Click"
             Content="Show" />
         <Button
-            x:Name="buttonWpfMsgBoxLongInstruction"
+            x:Name="ButtonWpfMsgBoxLongInstruction"
             Grid.Row="10"
             Grid.Column="2"
             Height="24"
@@ -244,7 +244,7 @@
             Click="ButtonWpfMsgBoxLongInstruction_Click"
             Content="Show" />
         <Button
-            x:Name="buttonWpfMsgBoxNiceExample"
+            x:Name="ButtonWpfMsgBoxNiceExample"
             Grid.Row="11"
             Grid.Column="2"
             Height="24"
@@ -254,7 +254,7 @@
             Click="ButtonWpfMsgBoxNiceExample_Click"
             Content="Show" />
         <Button
-            x:Name="buttonStdMsgBoxAllFeatures"
+            x:Name="ButtonStdMsgBoxAllFeatures"
             Grid.Row="12"
             Grid.Column="1"
             Height="24"
@@ -264,7 +264,7 @@
             Click="ButtonStdMsgBoxAllFeatures_Click"
             Content="Show" />
         <Button
-            x:Name="buttonWpfMsgBoxAllFeatures"
+            x:Name="ButtonWpfMsgBoxAllFeatures"
             Grid.Row="12"
             Grid.Column="2"
             Height="24"

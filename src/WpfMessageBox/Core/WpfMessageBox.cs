@@ -1,18 +1,20 @@
 ﻿using System.Windows;
 
-namespace WpfMessageBoxLibrary {
-
+// ReSharper disable once CheckNamespace
+namespace WpfMessageBoxLibrary
+{
     /// <summary>
     /// Displays a message box.
     /// </summary>
-    public static class WpfMessageBox {
-
+    public static class WpfMessageBox
+    {
         /// <summary>
         /// Displays a message box with the specified text.
         /// </summary>
         /// <param name="text">The text to display in the message box.</param>
         /// <returns>One of the MessageBoxResult values.</returns>
-        public static MessageBoxResult Show(string text) {
+        public static MessageBoxResult Show(string text)
+        {
             var msg = new WindowMain(text, MessageBoxButton.OK, MessageBoxImage.None);
             msg.ShowDialog();
             return msg.Result;
@@ -24,8 +26,10 @@ namespace WpfMessageBoxLibrary {
         /// <param name="owner">A Window that represents the owner window of the message box.</param>
         /// <param name="text">The text to display in the message box.</param>
         /// <returns>One of the MessageBoxResult values.</returns>
-        public static MessageBoxResult Show(Window owner, string text) {
-            var msg = new WindowMain(text, MessageBoxButton.OK, MessageBoxImage.None) {
+        public static MessageBoxResult Show(Window owner, string text)
+        {
+            var msg = new WindowMain(text, MessageBoxButton.OK, MessageBoxImage.None)
+            {
                 Owner = owner,
             };
             msg.ShowDialog();
@@ -38,8 +42,10 @@ namespace WpfMessageBoxLibrary {
         /// <param name="text">The text to display in the message box.</param>
         /// <param name="title">The text to display in the title bar of the message box.</param>
         /// <returns>One of the MessageBoxResult values.</returns>
-        public static MessageBoxResult Show(string text, string title) {
-            var msg = new WindowMain(text, MessageBoxButton.OK, MessageBoxImage.None) {
+        public static MessageBoxResult Show(string text, string title)
+        {
+            var msg = new WindowMain(text, MessageBoxButton.OK, MessageBoxImage.None)
+            {
                 Title = title,
             };
             msg.ShowDialog();
@@ -53,8 +59,10 @@ namespace WpfMessageBoxLibrary {
         /// <param name="text">The text to display in the message box.</param>
         /// <param name="title">The text to display in the title bar of the message box.</param>
         /// <returns>One of the MessageBoxResult values.</returns>
-        public static MessageBoxResult Show(Window owner, string text, string title) {
-            var msg = new WindowMain(text, MessageBoxButton.OK, MessageBoxImage.None) {
+        public static MessageBoxResult Show(Window owner, string text, string title)
+        {
+            var msg = new WindowMain(text, MessageBoxButton.OK, MessageBoxImage.None)
+            {
                 Owner = owner,
                 Title = title,
             };
@@ -71,8 +79,10 @@ namespace WpfMessageBoxLibrary {
         /// One of the MessageBoxButton values that specifies which button to display in the message box.
         /// </param>
         /// <returns>One of the MessageBoxResult values.</returns>
-        public static MessageBoxResult Show(string text, string title, MessageBoxButton button) {
-            var msg = new WindowMain(text, button, MessageBoxImage.None) {
+        public static MessageBoxResult Show(string text, string title, MessageBoxButton button)
+        {
+            var msg = new WindowMain(text, button, MessageBoxImage.None)
+            {
                 Title = title,
             };
             msg.ShowDialog();
@@ -90,8 +100,10 @@ namespace WpfMessageBoxLibrary {
         /// One of the MessageBoxButton values that specifies which button to display in the message box.
         /// </param>
         /// <returns>One of the MessageBoxResult values.</returns>
-        public static MessageBoxResult Show(Window owner, string text, string title, MessageBoxButton button) {
-            var msg = new WindowMain(text, button, MessageBoxImage.None) {
+        public static MessageBoxResult Show(Window owner, string text, string title, MessageBoxButton button)
+        {
+            var msg = new WindowMain(text, button, MessageBoxImage.None)
+            {
                 Owner = owner,
                 Title = title,
             };
@@ -111,8 +123,10 @@ namespace WpfMessageBoxLibrary {
         /// One of the MessageBoxImage values that specifies which image to display in the message box.
         /// </param>
         /// <returns>One of the MessageBoxResult values.</returns>
-        public static MessageBoxResult Show(string text, string title, MessageBoxButton button, MessageBoxImage image) {
-            var msg = new WindowMain(text, button, image) {
+        public static MessageBoxResult Show(string text, string title, MessageBoxButton button, MessageBoxImage image)
+        {
+            var msg = new WindowMain(text, button, image)
+            {
                 Title = title,
             };
             msg.ShowDialog();
@@ -133,8 +147,10 @@ namespace WpfMessageBoxLibrary {
         /// One of the MessageBoxImage values that specifies which image to display in the message box.
         /// </param>
         /// <returns>One of the MessageBoxResult values.</returns>
-        public static MessageBoxResult Show(Window owner, string text, string title, MessageBoxButton button, MessageBoxImage image) {
-            var msg = new WindowMain(text, button, image) {
+        public static MessageBoxResult Show(Window owner, string text, string title, MessageBoxButton button, MessageBoxImage image)
+        {
+            var msg = new WindowMain(text, button, image)
+            {
                 Owner = owner,
                 Title = title,
             };
@@ -147,8 +163,10 @@ namespace WpfMessageBoxLibrary {
         /// </summary>
         /// <param name="properties">The WpfMessageBoxProperties to apply to the message box.</param>
         /// <returns>One of the MessageBoxResult values.</returns>
-        public static MessageBoxResult Show(ref WpfMessageBoxProperties properties) {
-            var msg = new WindowMain(properties.Text, properties.Button, properties.Image) {
+        public static MessageBoxResult Show(ref WpfMessageBoxProperties properties)
+        {
+            var msg = new WindowMain(properties.Text, properties.Button, properties.Image)
+            {
                 ButtonCancelText = properties.ButtonCancelText,
                 ButtonNoText = properties.ButtonNoText,
                 ButtonOkText = properties.ButtonOkText,
@@ -176,8 +194,10 @@ namespace WpfMessageBoxLibrary {
         /// <param name="owner">A Window that represents the owner window of the message box.</param>
         /// <param name="properties">The WpfMessageBoxProperties to apply to the message box.</param>
         /// <returns>One of the MessageBoxResult values.</returns>
-        public static MessageBoxResult Show(Window owner, ref WpfMessageBoxProperties properties) {
-            var msg = new WindowMain(properties.Text, properties.Button, properties.Image) {
+        public static MessageBoxResult Show(Window owner, ref WpfMessageBoxProperties properties)
+        {
+            var msg = new WindowMain(properties.Text, properties.Button, properties.Image)
+            {
                 ButtonCancelText = properties.ButtonCancelText,
                 ButtonNoText = properties.ButtonNoText,
                 ButtonOkText = properties.ButtonOkText,
