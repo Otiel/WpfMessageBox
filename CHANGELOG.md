@@ -1,3 +1,14 @@
+# 1.3.0 (2025-10-19)
+
+## Breaking changes
+
+* Now targets .NET Framework 4.8 instead of 4.0.
+
+## New features
+
+* Multi-targets .NET Framework 4.8 and .NET 9. [#3](https://github.com/Otiel/WpfMessageBox/issues/3)
+* Focus is automatically set on TextBox (if present) or CheckBox (if present) when the window is open. [#2](https://github.com/Otiel/WpfMessageBox/issues/2)
+
 # 1.2.0 (2019-06-14)
 
 ## New features
