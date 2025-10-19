@@ -10,6 +10,7 @@
     MaxWidth="1000"
     x:ClassModifier="internal"
     KeyDown="Window_KeyDown"
+    Loaded="Window_OnLoaded"
     ResizeMode="NoResize"
     ShowInTaskbar="False"
     SizeToContent="WidthAndHeight"

@@ -235,5 +235,21 @@ namespace WpfMessageBoxLibrary
                 Clipboard.SetText(content);
             }
         }
+
+        private void Window_OnLoaded(object sender, RoutedEventArgs e)
+        {
+            // Focus TextBox if present
+            if (TextBox.Visibility == Visibility.Visible)
+            {
+                TextBox.Focus();
+                return;
+            }
+
+            // Else, focus CheckBox if present
+            if (CheckBox.Visibility == Visibility.Visible)
+            {
+                CheckBox.Focus();
+            }
+        }
     }
 }
