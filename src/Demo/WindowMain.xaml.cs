@@ -5,7 +5,7 @@ using WpfMessageBoxLibrary;
 
 namespace Demo {
 
-    public partial class WindowMain: Window {
+    public partial class WindowMain {
 
         public WindowMain() {
             InitializeComponent();
