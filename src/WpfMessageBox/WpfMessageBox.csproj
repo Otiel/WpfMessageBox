@@ -20,7 +20,7 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/Otiel/WpfMessageBox</RepositoryUrl>
     <PackageProjectUrl>https://github.com/Otiel/WpfMessageBox</PackageProjectUrl>
-    <PackageIconUrl>https://github.com/Otiel/WpfMessageBox/raw/master/docs/images/Icon.64x64.png</PackageIconUrl>
+    <PackageIcon>Icon.64x64.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>See CHANGELOG on source repository.</PackageReleaseNotes>
     <PackageTags>wpf messagebox message box</PackageTags>
@@ -36,6 +36,7 @@
 
   <ItemGroup>
     <None Include="..\..\README.md" Pack="true" PackagePath="\"/>
+    <None Include="..\..\docs\images\Icon.64x64.png" Pack="true" PackagePath="\"/>
 </ItemGroup>
 
 </Project>
