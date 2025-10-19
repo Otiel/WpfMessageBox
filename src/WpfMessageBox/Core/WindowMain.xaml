@@ -16,13 +16,13 @@
     WindowStartupLocation="CenterOwner"
     WindowStyle="SingleBorderWindow"
     mc:Ignorable="d">
-    <Grid x:Name="gridMain" Margin="10">
+    <Grid x:Name="GridMain" Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Grid
-            x:Name="gridContent"
+            x:Name="GridContent"
             Grid.Row="0"
             Margin="10">
             <Grid.ColumnDefinitions>
@@ -36,7 +36,7 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <Image
-                x:Name="imageIcon"
+                x:Name="ImageIcon"
                 Grid.Row="0"
                 Grid.RowSpan="2"
                 Grid.Column="0"
@@ -45,7 +45,7 @@
                 Margin="0,0,10,0"
                 VerticalAlignment="Top" />
             <TextBlock
-                x:Name="textBlockHeader"
+                x:Name="TextBlockHeader"
                 Grid.Row="0"
                 Grid.Column="1"
                 MaxHeight="100"
@@ -56,7 +56,7 @@
                 Text="[Header]"
                 TextWrapping="Wrap" />
             <ScrollViewer
-                x:Name="scrollViewerMessage"
+                x:Name="ScrollViewerMessage"
                 Grid.Row="1"
                 Grid.Column="1"
                 MaxHeight="500"
@@ -65,13 +65,13 @@
                 HorizontalScrollBarVisibility="Disabled"
                 VerticalScrollBarVisibility="Auto">
                 <TextBlock
-                    x:Name="textBlockMessage"
+                    x:Name="TextBlockMessage"
                     Text="[Message]"
                     TextOptions.TextFormattingMode="Display"
                     TextWrapping="Wrap" />
             </ScrollViewer>
             <TextBox
-                x:Name="textBox"
+                x:Name="TextBox"
                 Grid.Row="2"
                 Grid.Column="1"
                 Height="20"
@@ -79,7 +79,7 @@
                 Text="[TextBox]"
                 TextOptions.TextFormattingMode="Display" />
             <CheckBox
-                x:Name="checkBox"
+                x:Name="CheckBox"
                 Grid.Row="3"
                 Grid.Column="1"
                 Margin="0,10,0,0"
@@ -88,7 +88,7 @@
                 TextOptions.TextFormattingMode="Display" />
         </Grid>
         <Grid
-            x:Name="gridButtons"
+            x:Name="GridButtons"
             Grid.Row="1"
             Margin="0,10,0,0"
             HorizontalAlignment="Right">
@@ -99,7 +99,7 @@
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
             <Button
-                x:Name="buttonOk"
+                x:Name="ButtonOk"
                 Grid.Column="0"
                 Height="24"
                 MinWidth="80"
@@ -108,7 +108,7 @@
                 Content="[OK]"
                 TextOptions.TextFormattingMode="Display" />
             <Button
-                x:Name="buttonYes"
+                x:Name="ButtonYes"
                 Grid.Column="1"
                 Height="24"
                 MinWidth="80"
@@ -118,7 +118,7 @@
                 Content="[Yes]"
                 TextOptions.TextFormattingMode="Display" />
             <Button
-                x:Name="buttonNo"
+                x:Name="ButtonNo"
                 Grid.Column="2"
                 Height="24"
                 MinWidth="80"
@@ -128,7 +128,7 @@
                 Content="[No]"
                 TextOptions.TextFormattingMode="Display" />
             <Button
-                x:Name="buttonCancel"
+                x:Name="ButtonCancel"
                 Grid.Column="3"
                 Height="24"
                 MinWidth="80"

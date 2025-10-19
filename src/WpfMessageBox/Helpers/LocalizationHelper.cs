@@ -9,10 +9,10 @@ namespace WpfMessageBoxLibrary {
         private class UserStringNotFoundException: Exception {
         }
 
-        private const string _defaultCancelButtonText = "_Cancel";
-        private const string _defaultNoButtonText = "_No";
-        private const string _defaultOkButtonText = "_OK";
-        private const string _defaultYesButtonText = "Yes";
+        private const string DEFAULT_CANCEL_BUTTON_TEXT = "_Cancel";
+        private const string DEFAULT_NO_BUTTON_TEXT = "_No";
+        private const string DEFAULT_OK_BUTTON_TEXT = "_OK";
+        private const string DEFAULT_YES_BUTTON_TEXT = "Yes";
 
         /// <summary>
         /// Returns the localized string of the native MessageBox "Cancel" button from user32.dll.
@@ -21,7 +21,7 @@ namespace WpfMessageBoxLibrary {
             try {
                 return GetUserString(801);
             } catch (UserStringNotFoundException) {
-                return _defaultCancelButtonText;
+                return DEFAULT_CANCEL_BUTTON_TEXT;
             }
         }
 
@@ -32,7 +32,7 @@ namespace WpfMessageBoxLibrary {
             try {
                 return GetUserString(806);
             } catch (UserStringNotFoundException) {
-                return _defaultNoButtonText;
+                return DEFAULT_NO_BUTTON_TEXT;
             }
         }
 
@@ -43,7 +43,7 @@ namespace WpfMessageBoxLibrary {
             try {
                 return GetUserString(800);
             } catch (UserStringNotFoundException) {
-                return _defaultOkButtonText;
+                return DEFAULT_OK_BUTTON_TEXT;
             }
         }
 
@@ -54,7 +54,7 @@ namespace WpfMessageBoxLibrary {
             try {
                 return GetUserString(805);
             } catch (UserStringNotFoundException) {
-                return _defaultYesButtonText;
+                return DEFAULT_YES_BUTTON_TEXT;
             }
         }
 
@@ -87,7 +87,7 @@ namespace WpfMessageBoxLibrary {
         private static extern IntPtr GetModuleHandle(string lpModuleName);
 
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
-        private static extern int LoadString(IntPtr hInstance, uint uID, StringBuilder lpBuffer, int nBufferMax);
+        private static extern int LoadString(IntPtr hInstance, uint uId, StringBuilder lpBuffer, int nBufferMax);
 
         #endregion
     }
