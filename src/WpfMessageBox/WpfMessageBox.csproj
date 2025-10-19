@@ -8,7 +8,7 @@
     <Copyright>ⓒ Otiel $([System.DateTime]::Now.Year)</Copyright>
 
     <AppendPlatformToOutputPath>false</AppendPlatformToOutputPath>
-    <TargetFramework>net48</TargetFramework>
+    <TargetFrameworks>net48;net9.0-windows</TargetFrameworks>
     <UseWPF>true</UseWPF>
 
     <VersionPrefix>1.2.0</VersionPrefix>

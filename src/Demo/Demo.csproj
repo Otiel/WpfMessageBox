@@ -9,7 +9,7 @@
 
     <AppendPlatformToOutputPath>false</AppendPlatformToOutputPath>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net48</TargetFramework>
+    <TargetFrameworks>net48;net9.0-windows</TargetFrameworks>
     <UseWPF>true</UseWPF>
 
     <VersionPrefix>1.0.0</VersionPrefix>
