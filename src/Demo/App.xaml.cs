@@ -1,6 +1,4 @@
-﻿using System.Windows;
-
-namespace Demo {
+﻿namespace Demo {
 
     public partial class App {
     }
