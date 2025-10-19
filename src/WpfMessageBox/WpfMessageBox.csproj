@@ -18,6 +18,7 @@
     <PackageId>WpfMessageBox</PackageId>
     <Authors>Otiel</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/Otiel/WpfMessageBox</RepositoryUrl>
     <PackageProjectUrl>https://github.com/Otiel/WpfMessageBox</PackageProjectUrl>
     <PackageIconUrl>https://github.com/Otiel/WpfMessageBox/raw/master/docs/images/Icon.64x64.png</PackageIconUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
