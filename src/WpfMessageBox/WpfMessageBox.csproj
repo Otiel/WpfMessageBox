@@ -8,7 +8,7 @@
     <Copyright>ⓒ Otiel $([System.DateTime]::Now.Year)</Copyright>
 
     <AppendPlatformToOutputPath>false</AppendPlatformToOutputPath>
-    <TargetFramework>net48</TargetFramework>
+    <TargetFrameworks>net48;net9.0-windows</TargetFrameworks>
     <UseWPF>true</UseWPF>
 
     <VersionPrefix>1.2.0</VersionPrefix>
@@ -17,5 +17,9 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
     <VersionSuffix>pre$([System.DateTime]::Now.ToString("yyyyMMdd-HHmmss"))</VersionSuffix>
   </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net9.0-windows' ">
+    <PackageReference Include="System.Drawing.Common" Version="9.0.10" />
+  </ItemGroup>
 
 </Project>
