@@ -1,4 +1,4 @@
-<h1 align="center"><img alt="Icon" src="docs/images/Icon.32x32.png"> WpfMessageBox</h1>
+# WpfMessageBox
 
 [![Nuget](https://img.shields.io/nuget/v/wpfmessagebox.svg?logo=nuget)](https://www.nuget.org/packages/WpfMessageBox) [![build:master status](https://img.shields.io/appveyor/ci/Otiel/wpfmessagebox/master.svg?label=build:master&logo=appveyor)](https://ci.appveyor.com/project/Otiel/wpfmessagebox/branch/master) [![build:develop status](https://img.shields.io/appveyor/ci/Otiel/wpfmessagebox/develop.svg?label=build:develop&logo=appveyor)](https://ci.appveyor.com/project/Otiel/wpfmessagebox/branch/develop)
 
