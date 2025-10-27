@@ -1,6 +1,6 @@
 # WpfMessageBox
 
-[![Nuget](https://img.shields.io/nuget/v/wpfmessagebox.svg?logo=nuget)](https://www.nuget.org/packages/WpfMessageBox) [![build:master status](https://img.shields.io/appveyor/ci/Otiel/wpfmessagebox/master.svg?label=build:master&logo=appveyor)](https://ci.appveyor.com/project/Otiel/wpfmessagebox/branch/master)
+[![Nuget](https://img.shields.io/nuget/v/wpfmessagebox.svg?logo=nuget)](https://www.nuget.org/packages/WpfMessageBox) [![Workflow status](https://github.com/Otiel/WpfMessageBox/actions/workflows/dotnet.yml/badge.svg?branch=master)](https://github.com/Otiel/WpfMessageBox/actions/workflows/dotnet.yml)
 
 ## Description
 
