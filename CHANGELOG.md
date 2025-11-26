@@ -1,3 +1,20 @@
+# 2.0.0 (2025-11-29)
+
+## Breaking changes
+
+* The use of the standard `MessageBox` objects have been replaced in order to remove the `System.Drawing.Common` dependency. [#7](https://github.com/Otiel/WpfMessageBox/pull/7)
+
+  You should replace the use of:
+
+  * `MessageBoxResult` by `WpfMessageBoxResult`
+  * `MessageBoxIcon` by `WpfMessageBoxIcon`
+  * `MessageBoxImage` by `WpfMessageBoxImage`
+
+## New features
+
+* Add `WpfMessageBoxImage.Validation` showing a green tick ✔. [#7](https://github.com/Otiel/WpfMessageBox/pull/7)
+* Add support for .NET 10. [#6](https://github.com/Otiel/WpfMessageBox/pull/6)
+
 # 1.3.0 (2025-10-19)
 
 ## Breaking changes
