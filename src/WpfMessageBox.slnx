@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/SolutionItems/">
+    <File Path="../.github/workflows/dotnet.yml" />
+    <File Path="../CHANGELOG.md" />
+    <File Path="../README.md" />
+    <File Path="Directory.Build.props" />
+    <File Path="global.json" />
+  </Folder>
+  <Project Path="Demo/Demo.csproj">
+    <BuildDependency Project="WpfMessageBox/WpfMessageBox.csproj" />
+  </Project>
+  <Project Path="WpfMessageBox/WpfMessageBox.csproj" />
+</Solution>
