@@ -4,6 +4,8 @@
     <Copyright>ⓒ Otiel $([System.DateTime]::Now.Year)</Copyright>
     <AppendPlatformToOutputPath>false</AppendPlatformToOutputPath>
     <TargetFrameworks>net48;net9.0-windows;net10.0-windows</TargetFrameworks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <MSBuildTreatWarningsAsErrors>true</MSBuildTreatWarningsAsErrors>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
