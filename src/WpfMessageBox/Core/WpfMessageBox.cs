@@ -17,7 +17,7 @@ namespace WpfMessageBoxLibrary
         /// <returns>One of the <see cref="WpfMessageBoxResult" /> values.</returns>
         public static WpfMessageBoxResult Show(string text)
         {
-            var msg = new WindowMain(text, WpfMessageBoxButton.OK, MessageBoxImage.None);
+            var msg = new WindowMain(text, WpfMessageBoxButton.OK, WpfMessageBoxImage.None);
             msg.ShowDialog();
             return msg.Result;
         }
@@ -30,7 +30,7 @@ namespace WpfMessageBoxLibrary
         /// <returns>One of the <see cref="WpfMessageBoxResult" /> values.</returns>
         public static WpfMessageBoxResult Show(Window owner, string text)
         {
-            var msg = new WindowMain(text, WpfMessageBoxButton.OK, MessageBoxImage.None)
+            var msg = new WindowMain(text, WpfMessageBoxButton.OK, WpfMessageBoxImage.None)
             {
                 Owner = owner,
             };
@@ -46,7 +46,7 @@ namespace WpfMessageBoxLibrary
         /// <returns>One of the <see cref="WpfMessageBoxResult" /> values.</returns>
         public static WpfMessageBoxResult Show(string text, string title)
         {
-            var msg = new WindowMain(text, WpfMessageBoxButton.OK, MessageBoxImage.None)
+            var msg = new WindowMain(text, WpfMessageBoxButton.OK, WpfMessageBoxImage.None)
             {
                 Title = title,
             };
@@ -63,7 +63,7 @@ namespace WpfMessageBoxLibrary
         /// <returns>One of the <see cref="WpfMessageBoxResult" /> values.</returns>
         public static WpfMessageBoxResult Show(Window owner, string text, string title)
         {
-            var msg = new WindowMain(text, WpfMessageBoxButton.OK, MessageBoxImage.None)
+            var msg = new WindowMain(text, WpfMessageBoxButton.OK, WpfMessageBoxImage.None)
             {
                 Owner = owner,
                 Title = title,
@@ -83,7 +83,7 @@ namespace WpfMessageBoxLibrary
         /// <returns>One of the <see cref="WpfMessageBoxResult" /> values.</returns>
         public static WpfMessageBoxResult Show(string text, string title, WpfMessageBoxButton button)
         {
-            var msg = new WindowMain(text, button, MessageBoxImage.None)
+            var msg = new WindowMain(text, button, WpfMessageBoxImage.None)
             {
                 Title = title,
             };
@@ -104,7 +104,7 @@ namespace WpfMessageBoxLibrary
         /// <returns>One of the <see cref="WpfMessageBoxResult" /> values.</returns>
         public static WpfMessageBoxResult Show(Window owner, string text, string title, WpfMessageBoxButton button)
         {
-            var msg = new WindowMain(text, button, MessageBoxImage.None)
+            var msg = new WindowMain(text, button, WpfMessageBoxImage.None)
             {
                 Owner = owner,
                 Title = title,
@@ -122,10 +122,10 @@ namespace WpfMessageBoxLibrary
         /// One of the <see cref="WpfMessageBoxButton"/> values that specifies which button to display in the message box.
         /// </param>
         /// <param name="image">
-        /// One of the MessageBoxImage values that specifies which image to display in the message box.
+        /// One of the <see cref="WpfMessageBoxImage"/> values that specifies which image to display in the message box.
         /// </param>
         /// <returns>One of the <see cref="WpfMessageBoxResult" /> values.</returns>
-        public static WpfMessageBoxResult Show(string text, string title, WpfMessageBoxButton button, MessageBoxImage image)
+        public static WpfMessageBoxResult Show(string text, string title, WpfMessageBoxButton button, WpfMessageBoxImage image)
         {
             var msg = new WindowMain(text, button, image)
             {
@@ -146,10 +146,10 @@ namespace WpfMessageBoxLibrary
         /// One of the <see cref="WpfMessageBoxButton"/> values that specifies which button to display in the message box.
         /// </param>
         /// <param name="image">
-        /// One of the MessageBoxImage values that specifies which image to display in the message box.
+        /// One of the <see cref="WpfMessageBoxImage"/> values that specifies which image to display in the message box.
         /// </param>
         /// <returns>One of the <see cref="WpfMessageBoxResult" /> values.</returns>
-        public static WpfMessageBoxResult Show(Window owner, string text, string title, WpfMessageBoxButton button, MessageBoxImage image)
+        public static WpfMessageBoxResult Show(Window owner, string text, string title, WpfMessageBoxButton button, WpfMessageBoxImage image)
         {
             var msg = new WindowMain(text, button, image)
             {

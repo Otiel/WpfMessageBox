@@ -40,4 +40,8 @@
     <None Include="..\..\docs\images\Icon.64x64.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Resource Include="Resources\**" />
+  </ItemGroup>
+
 </Project>

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Drawing;
 using System.Windows;
 using System.Windows.Input;
 
@@ -84,7 +83,7 @@ namespace WpfMessageBoxLibrary
             set => TextBox.Text = value;
         }
 
-        public WindowMain(string message, WpfMessageBoxButton button, MessageBoxImage image)
+        public WindowMain(string message, WpfMessageBoxButton button, WpfMessageBoxImage image)
         {
             InitializeComponent();
 
@@ -172,29 +171,30 @@ namespace WpfMessageBoxLibrary
             }
         }
 
-        private void DisplayImage(MessageBoxImage image)
+        private void DisplayImage(WpfMessageBoxImage image)
         {
             switch (image)
             {
-                case MessageBoxImage.Information:
-                    // Also covers MessageBoxImage.Asterisk
-                    ImageIcon.Source = SystemIcons.Information.ToImageSource();
+                case WpfMessageBoxImage.Information:
+                    ImageIcon.Source = WpfMessageBoxLibrary.Resources.ImageInformation;
                     break;
-                case MessageBoxImage.Error:
-                    // Also covers MessageBoxImage.Hand Also covers MessageBoxImage.Stop
-                    ImageIcon.Source = SystemIcons.Error.ToImageSource();
+                case WpfMessageBoxImage.Error:
+                    ImageIcon.Source = WpfMessageBoxLibrary.Resources.ImageCrossCircle;
                     break;
-                case MessageBoxImage.Warning:
-                    // Also covers MessageBoxImage.Exclamation
-                    ImageIcon.Source = SystemIcons.Warning.ToImageSource();
+                case WpfMessageBoxImage.Exclamation:
+                    ImageIcon.Source = WpfMessageBoxLibrary.Resources.ImageExclamation;
                     break;
-                case MessageBoxImage.Question:
-                    ImageIcon.Source = SystemIcons.Question.ToImageSource();
+                case WpfMessageBoxImage.Question:
+                    ImageIcon.Source = WpfMessageBoxLibrary.Resources.ImageQuestion;
                     break;
-                default:
-                    // Also covers MessageBoxImage.None
+                case WpfMessageBoxImage.Validation:
+                    ImageIcon.Source = WpfMessageBoxLibrary.Resources.ImageTick;
+                    break;
+                case WpfMessageBoxImage.None:
                     ImageIcon.Source = null;
                     break;
+                default:
+                    throw new NotImplementedException();
             }
 
             ImageIcon.Visibility = ImageIcon.Source == null ? Visibility.Collapsed : Visibility.Visible;
