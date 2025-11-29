@@ -10,18 +10,11 @@
     <AssemblyTitle>WpfMessageBoxDemo</AssemblyTitle>
     <Description>Application used to demonstrate the capabilities of the WpfMessageBox</Description>
     <Product>WpfMessageBoxDemo</Product>
-    <Copyright>ⓒ Otiel $([System.DateTime]::Now.Year)</Copyright>
   </PropertyGroup>
 
   <PropertyGroup>
-    <AppendPlatformToOutputPath>false</AppendPlatformToOutputPath>
     <OutputType>WinExe</OutputType>
-    <TargetFrameworks>net48;net9.0-windows;net10.0-windows</TargetFrameworks>
     <UseWPF>true</UseWPF>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
-    <VersionSuffix>pre$([System.DateTime]::Now.ToString("yyyyMMdd-HHmmss"))</VersionSuffix>
   </PropertyGroup>
 
   <ItemGroup>
