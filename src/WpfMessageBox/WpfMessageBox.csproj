@@ -1,20 +1,24 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <!-- Version -->
+    <VersionPrefix>1.3.0</VersionPrefix>
+  </PropertyGroup>
+
+  <PropertyGroup>
     <!-- Assembly attributes -->
     <AssemblyTitle>WpfMessageBox</AssemblyTitle>
     <Description>A WPF message box, with optional features like custom buttons, textbox and checkbox.</Description>
     <Product>WpfMessageBox</Product>
-    <Copyright>ⓒ Otiel $([System.DateTime]::Now.Year)</Copyright>
+  </PropertyGroup>
 
-    <AppendPlatformToOutputPath>false</AppendPlatformToOutputPath>
-    <TargetFrameworks>net48;net9.0-windows;net10.0-windows</TargetFrameworks>
+  <PropertyGroup>
     <UseWPF>true</UseWPF>
-
-    <VersionPrefix>1.3.0</VersionPrefix>
-
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup>
     <!-- Package properties -->
     <PackageId>WpfMessageBox</PackageId>
     <Authors>Otiel</Authors>
@@ -25,10 +29,6 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>See CHANGELOG on source repository.</PackageReleaseNotes>
     <PackageTags>wpf messagebox message box</PackageTags>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
-    <VersionSuffix>pre$([System.DateTime]::Now.ToString("yyyyMMdd-HHmmss"))</VersionSuffix>
   </PropertyGroup>
 
   <ItemGroup>
