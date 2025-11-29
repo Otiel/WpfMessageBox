@@ -11,7 +11,7 @@ namespace WpfMessageBoxLibrary
         /// <summary>
         /// Gets or sets the buttons used.
         /// </summary>
-        public MessageBoxButton Button { get; set; }
+        public WpfMessageBoxButton Button { get; set; }
 
         /// <summary>
         /// Gets or sets the "Cancel" button text.
@@ -88,7 +88,7 @@ namespace WpfMessageBoxLibrary
             ButtonNoText = "_No";
             ButtonOkText = "_OK";
             ButtonYesText = "_Yes";
-            Button = MessageBoxButton.OK;
+            Button = WpfMessageBoxButton.OK;
             CheckBoxText = "";
             Image = MessageBoxImage.None;
             Header = "";

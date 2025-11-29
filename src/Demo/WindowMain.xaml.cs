@@ -46,7 +46,7 @@ namespace Demo
         {
             var msgProperties = new WpfMessageBoxProperties
             {
-                Button = MessageBoxButton.YesNoCancel,
+                Button = WpfMessageBoxButton.YesNoCancel,
                 ButtonCancelText = "Cancel, cancel!",
                 ButtonNoText = "Please no",
                 ButtonYesText = "Yes _Sir",
@@ -69,7 +69,7 @@ namespace Demo
         {
             var msgProperties = new WpfMessageBoxProperties
             {
-                Button = MessageBoxButton.YesNoCancel,
+                Button = WpfMessageBoxButton.YesNoCancel,
                 ButtonCancelText = "Cancel, cancel!",
                 ButtonNoText = "Please no",
                 ButtonYesText = "Yes _Sir",
@@ -86,7 +86,7 @@ namespace Demo
         {
             var msgProperties = new WpfMessageBoxProperties
             {
-                Button = MessageBoxButton.OK,
+                Button = WpfMessageBoxButton.OK,
                 Header = "Here we have an example of a very very very very very very very very very very very very very very very very very long instruction text.",
                 Image = MessageBoxImage.Information,
                 Text = "Some text",
@@ -99,7 +99,7 @@ namespace Demo
 
         private void ButtonWpfMsgBoxLongText_Click(object sender, RoutedEventArgs e)
         {
-            var result = WpfMessageBox.Show(this, GetLongSampleText(), "Some title", MessageBoxButton.YesNoCancel, MessageBoxImage.Error);
+            var result = WpfMessageBox.Show(this, GetLongSampleText(), "Some title", WpfMessageBoxButton.YesNoCancel, MessageBoxImage.Error);
             DisplayResult(result);
         }
 
@@ -107,7 +107,7 @@ namespace Demo
         {
             var msgProperties = new WpfMessageBoxProperties
             {
-                Button = MessageBoxButton.OKCancel,
+                Button = WpfMessageBoxButton.OKCancel,
                 ButtonOkText = "Set name",
                 CheckBoxText = "Don't ask again",
                 Image = MessageBoxImage.Exclamation,
@@ -127,7 +127,7 @@ namespace Demo
         {
             var msgProperties = new WpfMessageBoxProperties
             {
-                Button = MessageBoxButton.OKCancel,
+                Button = WpfMessageBoxButton.OKCancel,
                 CheckBoxText = "I've pre-checked this for you",
                 IsCheckBoxChecked = true,
                 IsCheckBoxVisible = true,
@@ -143,7 +143,7 @@ namespace Demo
         {
             var msgProperties = new WpfMessageBoxProperties
             {
-                Button = MessageBoxButton.OK,
+                Button = WpfMessageBoxButton.OK,
                 Header = "Some header",
                 Image = MessageBoxImage.Exclamation,
                 Text = "Some text",
@@ -156,19 +156,19 @@ namespace Demo
 
         private void ButtonWpfMsgBoxWithIcon_Click(object sender, RoutedEventArgs e)
         {
-            var result = WpfMessageBox.Show(this, "Some text", "Some title", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+            var result = WpfMessageBox.Show(this, "Some text", "Some title", WpfMessageBoxButton.OK, MessageBoxImage.Exclamation);
             DisplayResult(result);
         }
 
         private void ButtonWpfMsgBoxWithoutTitle_Click(object sender, RoutedEventArgs e)
         {
-            var result = WpfMessageBox.Show(this, "Some text", "", MessageBoxButton.OKCancel);
+            var result = WpfMessageBox.Show(this, "Some text", "", WpfMessageBoxButton.OKCancel);
             DisplayResult(result);
         }
 
         private void ButtonWpfMsgBoxWithText_Click(object sender, RoutedEventArgs e)
         {
-            var result = WpfMessageBox.Show(this, "Some text", "Some title", MessageBoxButton.YesNoCancel);
+            var result = WpfMessageBox.Show(this, "Some text", "Some title", WpfMessageBoxButton.YesNoCancel);
             DisplayResult(result);
         }
 
@@ -176,7 +176,7 @@ namespace Demo
         {
             var msgProperties = new WpfMessageBoxProperties
             {
-                Button = MessageBoxButton.OKCancel,
+                Button = WpfMessageBoxButton.OKCancel,
                 IsTextBoxVisible = true,
                 Text = "Some text",
                 TextBoxText = "Pre-defined text",
@@ -191,7 +191,7 @@ namespace Demo
         {
             var msgProperties = new WpfMessageBoxProperties
             {
-                Button = MessageBoxButton.OKCancel,
+                Button = WpfMessageBoxButton.OKCancel,
                 CheckBoxText = "I've pre-checked this for you",
                 IsCheckBoxChecked = true,
                 IsCheckBoxVisible = true,
@@ -206,7 +206,7 @@ namespace Demo
 
         private void DisplayResult(MessageBoxResult result)
         {
-            WpfMessageBox.Show(this, "Result is: DialogResult." + result, "Result", MessageBoxButton.OK, MessageBoxImage.Information);
+            WpfMessageBox.Show(this, "Result is: DialogResult." + result, "Result", WpfMessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void DisplayResult(MessageBoxResult result, WpfMessageBoxProperties msgProperties)

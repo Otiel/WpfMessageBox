@@ -84,7 +84,7 @@ namespace WpfMessageBoxLibrary
             set => TextBox.Text = value;
         }
 
-        public WindowMain(string message, MessageBoxButton button, MessageBoxImage image)
+        public WindowMain(string message, WpfMessageBoxButton button, MessageBoxImage image)
         {
             InitializeComponent();
 
@@ -139,29 +139,29 @@ namespace WpfMessageBoxLibrary
             Close();
         }
 
-        private void DisplayButtons(MessageBoxButton button)
+        private void DisplayButtons(WpfMessageBoxButton button)
         {
             switch (button)
             {
-                case MessageBoxButton.OK:
+                case WpfMessageBoxButton.OK:
                     ButtonCancel.Visibility = Visibility.Collapsed;
                     ButtonNo.Visibility = Visibility.Collapsed;
                     ButtonOk.Visibility = Visibility.Visible;
                     ButtonYes.Visibility = Visibility.Collapsed;
                     break;
-                case MessageBoxButton.OKCancel:
+                case WpfMessageBoxButton.OKCancel:
                     ButtonCancel.Visibility = Visibility.Visible;
                     ButtonNo.Visibility = Visibility.Collapsed;
                     ButtonOk.Visibility = Visibility.Visible;
                     ButtonYes.Visibility = Visibility.Collapsed;
                     break;
-                case MessageBoxButton.YesNo:
+                case WpfMessageBoxButton.YesNo:
                     ButtonCancel.Visibility = Visibility.Collapsed;
                     ButtonNo.Visibility = Visibility.Visible;
                     ButtonOk.Visibility = Visibility.Collapsed;
                     ButtonYes.Visibility = Visibility.Visible;
                     break;
-                case MessageBoxButton.YesNoCancel:
+                case WpfMessageBoxButton.YesNoCancel:
                     ButtonCancel.Visibility = Visibility.Visible;
                     ButtonNo.Visibility = Visibility.Visible;
                     ButtonOk.Visibility = Visibility.Collapsed;
@@ -200,23 +200,23 @@ namespace WpfMessageBoxLibrary
             ImageIcon.Visibility = ImageIcon.Source == null ? Visibility.Collapsed : Visibility.Visible;
         }
 
-        private void SetDefaultAndCancelButtons(MessageBoxButton button)
+        private void SetDefaultAndCancelButtons(WpfMessageBoxButton button)
         {
             switch (button)
             {
-                case MessageBoxButton.OK:
+                case WpfMessageBoxButton.OK:
                     ButtonOk.IsDefault = true;
                     ButtonOk.IsCancel = true;
                     break;
-                case MessageBoxButton.OKCancel:
+                case WpfMessageBoxButton.OKCancel:
                     ButtonOk.IsDefault = true;
                     ButtonCancel.IsCancel = true;
                     break;
-                case MessageBoxButton.YesNo:
+                case WpfMessageBoxButton.YesNo:
                     ButtonYes.IsDefault = true;
                     ButtonNo.IsCancel = true;
                     break;
-                case MessageBoxButton.YesNoCancel:
+                case WpfMessageBoxButton.YesNoCancel:
                     ButtonYes.IsDefault = true;
                     ButtonCancel.IsCancel = true;
                     break;
