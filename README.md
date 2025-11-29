@@ -6,8 +6,8 @@
 
 WpfMessageBox is a WPF message box implementation, aimed to be visually balanced between the default WPF style and the native .NET MessageBox. It offers the following features:
 
-* Returns the standard .NET [MessageBoxResult](https://docs.microsoft.com/en-us/dotnet/api/system.windows.messageboxresult)s.
-* Uses the standard MessageBox [icons](https://docs.microsoft.com/en-us/windows/desktop/uxguide/vis-std-icons).
+* Returns an equivalent of the standard .NET [MessageBoxResult](https://docs.microsoft.com/en-us/dotnet/api/system.windows.messageboxresult)s.
+* Uses an equivalent of the standard MessageBox [icons](https://docs.microsoft.com/en-us/windows/desktop/uxguide/vis-std-icons).
 * Ability to define custom buttons text.
 * Optional header text.
 * Optional TextBox.
@@ -19,23 +19,24 @@ WpfMessageBox is a WPF message box implementation, aimed to be visually balanced
 ## Usage
 
 1. Install through [Nuget](https://www.nuget.org/packages/WpfMessageBox)
-2. WpfMessageBox uses static method like the standard .NET MessageBox:
+2. WpfMessageBox uses static methods like the standard .NET MessageBox:
 
-    ```
+    ```csharp
     using WpfMessageBoxLibrary;
 
-    MessageBoxResult result = WpfMessageBox.Show("Some text", "Some title", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+    WpfMessageBoxResult result = WpfMessageBox.Show("Some text", "Some title", WpfMessageBoxButton.OK, WpfMessageBoxImage.Exclamation);
     ```
+
 3. In order to use the extra features offered by WpfMessageBox, you need to initialize a new `WpfMessageBoxProperties` which will hold the desired properties, then use the relevant static method:
 
-    ```
+    ```csharp
     using WpfMessageBoxLibrary;
 
     var msgProperties = new WpfMessageBoxProperties() {
-        Button = MessageBoxButton.OKCancel,
+        Button = WpfMessageBoxButton.OKCancel,
         ButtonOkText = "Set name",
         CheckBoxText = "Don't ask again",
-        Image = MessageBoxImage.Exclamation,
+        Image = WpfMessageBoxImage.Exclamation,
         Header = "No name defined",
         IsCheckBoxChecked = true,
         IsCheckBoxVisible = true,
@@ -44,12 +45,12 @@ WpfMessageBox is a WPF message box implementation, aimed to be visually balanced
         Title = "A nice example",
     };
 
-    MessageBoxResult result = WpfMessageBox.Show(this, ref msgProperties);
+    WpfMessageBoxResult result = WpfMessageBox.Show(this, ref msgProperties);
     ```
 
 4. The `WpfMessageBoxProperties` object allows you to retrieve the `TextBox` and `CheckBox` values after the user closed the message box:
 
-    ```
+    ```csharp
     bool checkBoxChecked = msgProperties.IsCheckBoxChecked;
     string textBoxContent = msgProperties.TextBoxText;
     ```
@@ -63,3 +64,8 @@ See the [changelog](CHANGELOG.md).
 ## License
 
 WpfMessageBox is licensed under the MIT license - see the [LICENSE](LICENSE) file for details.
+
+## Credits
+
+Some icons by [Yusuke Kamiyamane](http://p.yusukekamiyamane.com) licensed under a [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0).
+

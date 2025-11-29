@@ -1,10 +1,5 @@
-﻿using System.Drawing;
-using System.Windows;
-using System.Windows.Interop;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
+﻿// ReSharper disable once CheckNamespace
 
-// ReSharper disable once CheckNamespace
 namespace WpfMessageBoxLibrary
 {
     internal static class Extensions
@@ -24,16 +19,6 @@ namespace WpfMessageBoxLibrary
             }
 
             return accelerator + input;
-        }
-
-        /// <summary>
-        /// Tranforms the specified Icon instance to an ImageSource.
-        /// </summary>
-        /// <param name="icon">The Icon to transform.</param>
-        public static ImageSource ToImageSource(this Icon icon)
-        {
-            ImageSource imageSource = Imaging.CreateBitmapSourceFromHIcon(icon.Handle, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
-            return imageSource;
         }
     }
 }

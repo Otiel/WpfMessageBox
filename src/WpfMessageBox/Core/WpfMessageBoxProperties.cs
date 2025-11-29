@@ -1,6 +1,5 @@
-﻿using System.Windows;
+﻿// ReSharper disable once CheckNamespace
 
-// ReSharper disable once CheckNamespace
 namespace WpfMessageBoxLibrary
 {
     /// <summary>
@@ -11,7 +10,7 @@ namespace WpfMessageBoxLibrary
         /// <summary>
         /// Gets or sets the buttons used.
         /// </summary>
-        public MessageBoxButton Button { get; set; }
+        public WpfMessageBoxButton Button { get; set; }
 
         /// <summary>
         /// Gets or sets the "Cancel" button text.
@@ -46,7 +45,7 @@ namespace WpfMessageBoxLibrary
         /// <summary>
         /// Gets or sets the image.
         /// </summary>
-        public MessageBoxImage Image { get; set; }
+        public WpfMessageBoxImage Image { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether the checkbox should be checked by default.
@@ -88,9 +87,9 @@ namespace WpfMessageBoxLibrary
             ButtonNoText = "_No";
             ButtonOkText = "_OK";
             ButtonYesText = "_Yes";
-            Button = MessageBoxButton.OK;
+            Button = WpfMessageBoxButton.OK;
             CheckBoxText = "";
-            Image = MessageBoxImage.None;
+            Image = WpfMessageBoxImage.None;
             Header = "";
             IsCheckBoxChecked = false;
             IsCheckBoxVisible = false;
