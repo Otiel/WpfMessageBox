@@ -76,7 +76,7 @@ namespace WpfMessageBoxLibrary
             }
         }
 
-        public MessageBoxResult Result { get; set; }
+        public WpfMessageBoxResult Result { get; set; }
 
         public string TextBoxText
         {
@@ -117,25 +117,25 @@ namespace WpfMessageBoxLibrary
 
         private void ButtonCancel_Click(object sender, RoutedEventArgs e)
         {
-            Result = MessageBoxResult.Cancel;
+            Result = WpfMessageBoxResult.Cancel;
             Close();
         }
 
         private void ButtonNo_Click(object sender, RoutedEventArgs e)
         {
-            Result = MessageBoxResult.No;
+            Result = WpfMessageBoxResult.No;
             Close();
         }
 
         private void ButtonOk_Click(object sender, RoutedEventArgs e)
         {
-            Result = MessageBoxResult.OK;
+            Result = WpfMessageBoxResult.OK;
             Close();
         }
 
         private void ButtonYes_Click(object sender, RoutedEventArgs e)
         {
-            Result = MessageBoxResult.Yes;
+            Result = WpfMessageBoxResult.Yes;
             Close();
         }
 

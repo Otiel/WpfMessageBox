@@ -209,7 +209,12 @@ namespace Demo
             WpfMessageBox.Show(this, "Result is: DialogResult." + result, "Result", WpfMessageBoxButton.OK, MessageBoxImage.Information);
         }
 
-        private void DisplayResult(MessageBoxResult result, WpfMessageBoxProperties msgProperties)
+        private void DisplayResult(WpfMessageBoxResult result)
+        {
+            WpfMessageBox.Show(this, "Result is: DialogResult." + result, "Result", WpfMessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private void DisplayResult(WpfMessageBoxResult result, WpfMessageBoxProperties msgProperties)
         {
             WpfMessageBox.Show(
                 this,
